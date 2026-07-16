@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 340px; padding: 12px; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; }
+  h1 { font-size: 15px; margin-bottom: 10px; }
+  .section { margin-bottom: 10px; }
+  .label { font-size: 11px; color: #888; margin-bottom: 4px; }
+  .row { display: flex; gap: 6px; align-items: center; }
+  .row.fill { display: flex; gap: 6px; }
+  .row.fill input { flex: 1; }
+  .url-text { font-size: 12px; color: #333; word-break: break-all; background: #f5f5f5; border-radius: 4px; padding: 6px 8px; flex: 1; overflow: hidden; }
+  input[type=text] { border: 1px solid #ddd; border-radius: 4px; padding: 5px 8px; font-size: 12px; outline: none; }
+  input[type=text]:focus { border-color: #1976d2; }
+  button { cursor: pointer; border: 1px solid #ddd; border-radius: 4px; padding: 5px 10px; font-size: 12px; background: #fff; white-space: nowrap; }
+  button:hover { background: #f0f0f0; }
+  button.primary { background: #1976d2; color: #fff; border-color: #1976d2; }
+  button.primary:hover { background: #1565c0; }
+  button.danger { color: #d32f2f; border-color: #d32f2f; }
+  button.small { padding: 3px 8px; font-size: 11px; }
+  .list-item { display: flex; align-items: center; gap: 6px; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+  .list-item:last-child { border-bottom: none; }
+  .list-item .url { flex: 1; font-size: 12px; word-break: break-all; }
+  .empty { color: #aaa; text-align: center; padding: 16px 0; font-size: 12px; }
+  .footer { border-top: 1px solid #eee; padding-top: 8px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>URL Blocker</h1>
+
+<div class="section">
+  <div class="label">当前页面</div>
+  <div class="row">
+    <span class="url-text" id="currentUrl">加载中...</span>
+    <button class="primary" id="blockBtn">屏蔽</button>
+  </div>
+</div>
+
+<div class="section">
+  <div class="label">自定义规则</div>
+  <div class="row fill">
+    <input type="text" id="customUrl" placeholder="网址 / 域名 / 关键词" />
+    <button id="addBtn">添加</button>
+  </div>
+</div>
+
+<div class="section">
+  <div class="label">已屏蔽规则</div>
+  <div id="ruleList"><div class="empty">暂无规则</div></div>
+</div>
+
+<div class="footer">
+  <button id="optionsBtn">详细设置</button>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

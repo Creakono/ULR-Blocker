@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "URL Blocker",
+  "version": "1.0.0",
+  "description": "阻止指定网址的页面加载并关闭标签页",
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "URL Blocker"
+  },
+  "options_page": "options.html"
+}
