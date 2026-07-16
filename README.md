@@ -10,12 +10,12 @@
 
 ## 说明
 
-> 本项目完全由 AI 生成（GitHub Copilot / Claude），仅作个人用途进行记录存档。
+> 本项目完全由 AI 生成，仅作个人用途进行记录存档。
 >
 > This project is entirely AI-generated, for personal archival purposes only.
 
 ## 使用
 
 1. 在 Chrome 扩展管理页面 `chrome://extensions/` 开启「开发者模式」
-2. 点击「加载已解压的扩展」，选择本项目文件夹
+2. 点击「加载未打包的扩展程序」，选择本项目的文件夹或压缩包
 3. 点击扩展图标配置需要屏蔽的网址
